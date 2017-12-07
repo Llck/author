@@ -1,0 +1,19 @@
+<%= link_to "New", new_author_path %>
+  <table border="1">
+    <thead>
+      <th>Name</th>
+      <th>Book</th>
+      <th colspan="3"></th>
+    </thead>
+    <tbody>
+      <% @authors.each do |author| %>
+        <tr>
+          <td><%= author.name %></td>
+          <td><%= author.book %></td>
+            <td><%= link_to "Show", author %></td>
+            <td><%= link_to "Edit", adit_author_path(author) %></td>
+            <td><%= link_to "Delete", author, method: :delete %>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
